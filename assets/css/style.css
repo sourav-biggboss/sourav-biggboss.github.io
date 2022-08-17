@@ -12,12 +12,10 @@ body::before {
   content: "";
   position: fixed;
   background:#000;
-  background: #040404 url("../img/bg.svg") top right no-repeat;
-  background-size: cover;
   left: 0;
   right: 0;
   top: 0;
-  height: 100vh;
+  height: auto;
   z-index: -1;
 }
 @media (min-width: 1024px) {
@@ -64,7 +62,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
 #header h1 a, #header h1 a:hover {
-  color: #fff;
   line-height: 1;
   display: inline-block;
 }
@@ -991,5 +988,92 @@ section .container {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+
+.typewriter h2 {
+  display: inline-block;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #18d26e; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+    color: #fff;
+    padding-bottom: 6px;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #18d26e; }
+}
+.content-strok {
+  position: relative;
+  margin-left: 12%!important;
+  margin-bottom: 1%!important;
+}
+
+.content-strok a {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.content-strok  a:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 1px #18d26e;
+}
+.content-strok  a:nth-child(2) {
+  color: #18d26e;
+  animation: animate 4s ease-in-out infinite!important;
+}
+@media only screen and (max-width: 600px) {
+  .content-strok {
+    margin-left: 103%!important;
+    margin-bottom: 6%!important;
+    width: 100%;
+  }
+  .content-strok a {
+  font-size: 38px!important;
+  }
+  .video-staff{
+    display:none;
+  }
+}
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
   }
 }

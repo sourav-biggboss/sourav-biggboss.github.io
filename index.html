@@ -27,18 +27,26 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/particals.css" rel="stylesheet">
+  <link href="assets/css/particals.css" rel="stylesheet" media="screen">
 
 </head>
 
-
-
 <body  id="particles-js">
-
   <header id="header">
-    <div class="container">
+    
+    <div class="container typewriter">
 
-      <h1><a href="index.html">Sourav Maity</a></h1>
+      <!-- <a href="index.html">
+        <div class="content-strok">
+          <h3 class="">Sourav Maity</h3>
+          <h3 class="">Sourav Maity</h3>
+        </div>
+      </a> -->
+      
+      <h1 class="content-strok">
+        <a href="index.html">Sourav Maity</a>
+        <a href="index.html">Sourav Maity</a>
+      </h1>
       <h2>I'm a passionate <span>Web Developer</span></h2>
 
       <nav id="navbar" class="navbar">
@@ -284,7 +292,12 @@
 
       <div class="section-title">
         <h2>Contact</h2>
-        <p>Contact Me</p>
+        <div class=" d-flex align-items-center">
+          <p class="m-0">Contact Me</p>
+          <video autoplay="autoplay"  class="ml-2 video-staff" style="width: 110px;margin-left: 18px;">
+            <source src="./assets/img/staff.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
 
       <div class="row mt-2">
@@ -358,9 +371,129 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/particles/particles.js"></script>
+  <script src="assets/vendor/particles/app.js"></script>
+  <script src="assets/vendor/particles/stats.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script>
+   particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#18d26e"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 3,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 288.6141709557941,
+        "color": "#18d26e",
+        "opacity": 0.3286994724774322,
+        "width": 0.9620472365193136
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 400,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
+  });
+  var count_particles, stats, update;
+  stats = new Stats();
+  stats.setMode(0);
+  stats.domElement.style.position = "absolute";
+  stats.domElement.style.left = "0px";
+  stats.domElement.style.top = "0px";
+  </script>
 </body>
 
 </html>
